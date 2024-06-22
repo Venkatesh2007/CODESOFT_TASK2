@@ -1,0 +1,121 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Concert+One&family=Pacifico&display=swap');
+
+*{
+  scrollbar-width: none;
+  overflow-x: hidden;
+}
+body {
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+  margin: 0;
+  position: relative;
+}
+
+.title{
+    font-family: "Concert One", sans-serif;
+}
+
+.handwritten{
+  font-family: "Caveat", cursive;
+}
+
+.pacifico{
+  font-family: "Pacifico", cursive;
+}
+
+body::before, body::after {
+  content: '';
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0));
+  border-radius: 50%;
+  z-index: -1;
+  animation: rotate 20s linear infinite, float 5s ease-in-out infinite;
+}
+
+body::before {
+  top: -75px;
+  left: -75px;
+}
+
+body::after {
+  bottom: -75px;
+  right: -75px;
+}
+
+@keyframes rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+.bg-gradient {
+  position: fixed; /* Change from absolute to fixed */
+  inset: 0;
+  background: linear-gradient(135deg, #6b2e8a, #3b8d99);
+  opacity: 0.9;
+  z-index: -2;
+  overflow-x: hidden;
+  overflow-y: auto; /* Add overflow property for scrolling */
+}
+
+.shape {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20%;
+  animation: move 10s ease-in-out infinite;
+  z-index: -1;
+}
+
+.shape:nth-child(1) {
+  top: 10%;
+  left: 10%;
+  animation-delay: -2s;
+}
+
+.shape:nth-child(2) {
+  top: 30%;
+  right: 10%;
+  animation-delay: -4s;
+}
+
+.shape:nth-child(3) {
+  bottom: 20%;
+  left: 20%;
+  animation-delay: -6s;
+}
+
+.shape:nth-child(4) {
+  bottom: 10%;
+  right: 20%;
+  animation-delay: -8s;
+}
+
+@keyframes move {
+  0%, 100% { transform: translate(0, 0); }
+  25% { transform: translate(20px, -20px); }
+  50% { transform: translate(-20px, 20px); }
+  75% { transform: translate(20px, 20px); }
+}
+
+.glassmorphism {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+
