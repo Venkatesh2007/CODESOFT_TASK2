@@ -24,6 +24,7 @@ function AddTodo({ handleAdd }) {
             <button
                 type="submit"
                 className="px-4 py-2 bg-purple-600 rounded-lg shadow-lg hover:bg-purple-700 transition transform hover:scale-105 glassmorphism title mt-4 sm:mt-0"
+                disabled={text.trim()===''}
             >
                 Add
             </button>
