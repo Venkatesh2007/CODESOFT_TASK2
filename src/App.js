@@ -8,8 +8,7 @@ function App() {
     // Load todos from local storage if available
     const savedTodos = localStorage.getItem('Todos');
     return savedTodos ? JSON.parse(savedTodos) : [
-      { id: 1, text: "Complete Todo App", completed: false },
-      { id: 2, text: "Complete DSA", completed: false },
+      
     ];
   });
 
